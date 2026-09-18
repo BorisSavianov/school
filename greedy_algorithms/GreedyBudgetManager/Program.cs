@@ -7,7 +7,7 @@
     new Book("Book 5", "Author 5", 30)
 };
 
-int budget = 30;
+double budget = 30;
 
 string[] selectedBooks = Console.ReadLine().Split(',');
 
@@ -59,9 +59,9 @@ public class Book
 {
     public string Title { get; set; }
     public string Author { get; set; }
-    public int Price { get; set; }
+    public double Price { get; set; }
 
-    public Book(string title, string author, int price)
+    public Book(string title, string author, double price)
     {
         Title = title;
         Author = author;
