@@ -17,7 +17,7 @@ List<Item> selectedItems = new();
 double remainingCapacity = capacity;
 double totalValue = 0;
 
-foreach (Item item in items.OrderByDescending(i => i.ValuePerKG()))
+foreach (Item item in items.OrderByDescending(i => i.ValuePerKG))
 {
     if (item.Weight <= remainingCapacity)
     {
@@ -44,9 +44,12 @@ public class Item
     public double Weight { get; set; }
     public double Value { get; set; }
 
-    public double ValuePerKG()
+    public double ValuePerKG
     {
-        return Value / Weight;
+        get
+        {
+            return Value / Weight;
+        }
     }
 
     public Item(string name, double weight, double value)
